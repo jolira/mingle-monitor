@@ -1,0 +1,34 @@
+{
+    "name":"mingle-monitor",
+    "version":"0.0.1",
+    "description":"Performance monitoring for a mingle server",
+    "keywords":["performance", "mingle"],
+    "author":"Joachim Kainz <jfk@jolira.com> (http://www.jolira.com)",
+    "repository":{
+        "url":"https://github.com/jolira/mingle-monitor.git",
+        "type":"git"
+    },
+    "dependencies":{
+        "shred":"< 1.0.0",
+        "batch":"*"
+    },
+    "devDependencies":{
+        "debug":"*",
+        "horaa":"*",
+        "vows":"*",
+        "jake":"*",
+        "uglify-js":"*"
+    },
+    "scripts":{
+        "test":"jake test",
+        "prepublish":"npm prune"
+    },
+    "bugs":{
+        "mail":"dev@jolira.com",
+        "url":"http://github.com/jolira/mingle-monitor/issues"
+    },
+    "main":"index",
+    "engines":{
+        "node":">= 0.5.0 < 0.7.0"
+    }
+}
