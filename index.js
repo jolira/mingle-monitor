@@ -1,3 +1,4 @@
+/*jslint white: false, forin: false, node: true, indent: 4 */
 (function (exports, __dirname) {
     "use strict";
 
