@@ -10,6 +10,7 @@
     },
     "dependencies":{
         "shred":"< 1.0.0",
+        "htmlparser": "*",
         "batch":"*"
     },
     "devDependencies":{
