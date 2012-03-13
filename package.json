@@ -11,6 +11,9 @@
     "dependencies":{
         "shred":"< 1.0.0",
         "htmlparser": "*",
+        "apricot": "*",
+        "jsdom": "*",
+        "jquery": "*",
         "batch":"*"
     },
     "devDependencies":{
