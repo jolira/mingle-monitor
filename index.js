@@ -20,8 +20,12 @@
         process.exit(-2);
     }
 
-    var monitor = require('./lib/monitor'),
-        server = getServer();
 
-    monitor(server);
+    var mingleMonitor = require('./lib/monitor');
+
+
+    var monitor = mingleMonitor(getServer());
+
+    monitor.start();
+
 })();
