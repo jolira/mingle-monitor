@@ -22,14 +22,15 @@
         process.exit(-2);
     }
 
-    function getAuth(){
-        var fileContents = fs.readFileSync('./conf/auth.json','utf8');
+    function getConfig(){
+        var fileContents = fs.readFileSync('./conf/monitor-config.json','utf8');
         return JSON.parse(fileContents);
     }
 
     var mingleMonitor = require('./lib/monitor');
-    var auth = getAuth();
-    var monitor = mingleMonitor(getServer(), auth);
+    var config = getConfig();
+    var monitor = mingleMonitor(getServer(), config);
     monitor.start();
+
 
 })();
