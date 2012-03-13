@@ -6,9 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-var login = require('../lib/login'),
-    //connect = require("connect"),
-    assert = require('assert'),
+var assert = require('assert'),
     testCase = require('nodeunit').testCase,
     mingleClient = require('../lib/mingleClient'),
     INDEX_PAGE = 'http://mingle.local.com:8080/',

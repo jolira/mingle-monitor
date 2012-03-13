@@ -2,6 +2,8 @@
 (function () {
     "use strict";
 
+    var fs = require('fs');
+
     process.on("uncaughtException", function (err) {
         console.error(err.stack || err);
         process.exit(-1);
@@ -20,12 +22,14 @@
         process.exit(-2);
     }
 
+    function getAuth(){
+        var fileContents = fs.readFileSync('./conf/auth.json','utf8');
+        return JSON.parse(fileContents);
+    }
 
     var mingleMonitor = require('./lib/monitor');
-
-
-    var monitor = mingleMonitor(getServer());
-
+    var auth = getAuth();
+    var monitor = mingleMonitor(getServer(), auth);
     monitor.start();
 
 })();
